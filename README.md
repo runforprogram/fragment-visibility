@@ -75,7 +75,7 @@ class YourFragment : VisibilityFragment() {
     }
 }
 ```
-
+[介绍](https://www.jianshu.com/p/de332ecdd14d)
 ## License
 
 [Apache license 2.0](LICENSE) © Taylor Zhang
