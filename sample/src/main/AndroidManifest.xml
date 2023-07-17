@@ -19,11 +19,13 @@
         <activity android:name=".DirectlyActivity" />
         <activity android:name=".ContainerOldWayActivity" />
         <activity android:name=".ContainerNewWayActivity" />
-        <activity android:name=".ViewPagerOldWayActivity" />
-        <activity android:name=".ViewPagerNewWayActivity" />
-        <activity android:name=".ViewPager2Activity" />
+        <activity android:name=".viewpager.ViewPagerOldWayActivity" />
+        <activity android:name=".viewpager.ViewPagerNewWayActivity" />
+        <activity android:name=".viewpager.ViewPager2Activity" />
         <activity android:name=".NestedOldWayActivity" />
         <activity android:name=".NestedNewWayActivity" />
+        <activity android:name=".viewpager.ViewPagerNewWayNestedActivity"/>
+        <activity android:name=".viewpager.ViewPagerOldWayNestedActivity"/>
     </application>
 
 </manifest>

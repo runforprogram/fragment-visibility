@@ -1,23 +1,24 @@
-package cc.taylorzhang.fragmentvisibility.sample
+package cc.taylorzhang.fragmentvisibility.sample.viewpager
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentPagerAdapter
+import cc.taylorzhang.fragmentvisibility.sample.ParentOldWayFragment
 import cc.taylorzhang.fragmentvisibility.sample.databinding.ActivityViewPagerBinding
 
 /**
  * <pre>
  *     author : Taylor Zhang
  *     time   : 2021/02/24
- *     desc   : Use fragment in ViewPager in new way.
+ *     desc   : Use fragment in ViewPager in old way.
  *     version: 1.0.0
  * </pre>
  */
-class ViewPagerNewWayActivity : AppCompatActivity() {
+class ViewPagerOldWayNestedActivity : AppCompatActivity() {
 
     companion object {
-        const val TITLE = "Use fragment in ViewPager in new way"
+        const val TITLE = "Use nested fragment in ViewPager in old way"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -28,13 +29,13 @@ class ViewPagerNewWayActivity : AppCompatActivity() {
         supportActionBar?.title = TITLE
 
         binding.viewPager.adapter = object : FragmentPagerAdapter(
-            supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT
+            supportFragmentManager, BEHAVIOR_SET_USER_VISIBLE_HINT
         ) {
 
             override fun getCount(): Int = 3
 
             override fun getItem(position: Int): Fragment {
-                return ChildFragment.newInstance("Fragment-$position")
+                return ParentOldWayFragment.newInstance(position)
             }
         }
     }
